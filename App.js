@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
 function App() {
   const ui = (
     <SafeAreaView style={{flex:1}} >
-      <StatusBar styles="true"/>
+      <StatusBar hidden={false}/>
       <View style={styles.view1}>
         <Text style={styles.text1}>I am</Text>
       </View>
