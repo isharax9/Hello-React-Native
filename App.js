@@ -1,46 +1,76 @@
-import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View, StatusBar ,Button ,Pressable,Alert } from "react-native";
 
 function App() {
   const ui = (
-    <SafeAreaView style={{flex:1}} >
-      <StatusBar hidden={false}/>
-      <View style={styles.view1}>
-        <Text style={styles.text1}>I am</Text>
-      </View>
-      <View style={styles.view2}>
-        <Text style={styles.text1}>Proud to</Text>
-      </View>
-      <View style={styles.view3}>
-        <Text style={styles.text1}>Be a Devans</Text>
-      </View>
+    <SafeAreaView style={styles.mainView}>
+      <StatusBar hidden={false} />
+
+     
+        <Text style={styles.text1}>React Native</Text>
+
+        <Button title="native button" color="#273c75" onPress={test}/>
+
+        <Pressable onPress={test} >
+          <View style={styles.btnView}>
+             <Text style={styles.btnText}>I'm pressable!</Text>
+          </View>  
+  
+        </Pressable>
+
+      
+
     </SafeAreaView>
   );
 
   return ui;
 }
 
-const styles = StyleSheet.create({
-  text1: {
-    color: "rgb(255, 255, 255)",
-    fontFamily: "",
-    
-  },
-  view1: {
-    backgroundColor: "#111e3c",
-    flex: 1,
-    justifyContent:"flex-start",
-    alignItems:"center",
+const styles = StyleSheet.create
+(
+  {
+    mainView: {
+      flex: 1,
+      backgroundColor: "#353b48",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    text1: {
+      color: "#f5f6fa",
+      fontSize: 20,
+      marginBottom: 5,
+    },
+    btnText: {
+      color: "#192a56",
+      fontSize: 18,
+      fontWeight: "bold",
+      
+    },
+    btnView: {
+      backgroundColor: "#f5f6fa",
+      padding: 10,
+      width: 200,
+      height: 50,
+      borderRadius: 8,
+      marginTop: 15,
+      justifyContent: "center",
+      alignItems: "center",
+     
+      
+    },
 
-  },
-  view2:{
-    backgroundColor:"#ecc036",
-    flex: 1
-  },
-  view3:{
-    backgroundColor:"#4f0b13",
-    flex: 1
-  },
 
-});
+  }
+);
 
 export default App;
+
+
+function test(){
+
+  //web alert
+  // alert("test going on nawwa");
+
+  //mobile alert
+  Alert.alert("Infor to user","test going on nawwa");
+
+}
