@@ -1,29 +1,38 @@
 import { SafeAreaView, StyleSheet, Text, View, StatusBar ,Button ,Pressable,Alert } from "react-native";
+import React, { useState } from "react";
 
 function App() {
+
+  const[t,setT]=useState("The initial text");
+
   const ui = (
     <SafeAreaView style={styles.mainView}>
       <StatusBar hidden={false} />
+    
+        <Text style={styles.text1}>{t}</Text>
+        
+        <Pressable onPress={test} >
 
-     
-        <Text style={styles.text1}>React Native</Text>
-
-        <Button title="native button" color="#273c75" />
-
-        <Pressable onPress={q1} onLongPress={p1} onPressOut={q2} delayLongPress={1000} hitSlop={{bottom:200}} >
           <View style={styles.btnView}>
-             <Text style={styles.btnText}>Press</Text>
+             <Text style={styles.btnText}>I'm pressable!</Text>
           </View>  
   
         </Pressable>
-
       
-
     </SafeAreaView>
   );
+  
+  //inner function 
+  function test(){
+    setT("The text has been changed");
+  }
 
   return ui;
 }
+
+export default App;
+
+
 
 const styles = StyleSheet.create
 (
@@ -61,25 +70,3 @@ const styles = StyleSheet.create
 
   }
 );
-
-export default App;
-
-
-function q2(){
-
- 
-  Alert.alert("Out","out");
-
-}
-function q1(){
-
-  Alert.alert("On press","on press");
-
-}
-
-
-function p1(){
-
-  Alert.alert("onLongPress","onlong press");
-
-}
