@@ -8,11 +8,11 @@ function App() {
      
         <Text style={styles.text1}>React Native</Text>
 
-        <Button title="native button" color="#273c75" onPress={test}/>
+        <Button title="native button" color="#273c75" />
 
-        <Pressable onPress={test} >
+        <Pressable onPress={q1} onLongPress={p1} onPressOut={q2} delayLongPress={1000} hitSlop={{bottom:200}} >
           <View style={styles.btnView}>
-             <Text style={styles.btnText}>I'm pressable!</Text>
+             <Text style={styles.btnText}>Press</Text>
           </View>  
   
         </Pressable>
@@ -65,12 +65,21 @@ const styles = StyleSheet.create
 export default App;
 
 
-function test(){
+function q2(){
 
-  //web alert
-  // alert("test going on nawwa");
+ 
+  Alert.alert("Out","out");
 
-  //mobile alert
-  Alert.alert("Infor to user","test going on nawwa");
+}
+function q1(){
+
+  Alert.alert("On press","on press");
+
+}
+
+
+function p1(){
+
+  Alert.alert("onLongPress","onlong press");
 
 }
