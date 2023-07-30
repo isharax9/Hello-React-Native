@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
+import { TouchableOpacity } from "react-native";
 import { Alert } from "react-native";
 import { Pressable } from "react-native";
 import { SafeAreaView } from "react-native";
@@ -13,9 +14,11 @@ const ui = (
   <SafeAreaView style={styles.view1}>
     <StatusBar hidden={false}/>
 
-    <Pressable onPress={m}>
-      <Text style={styles.text1}>Press</Text>
-    </Pressable>
+    <TouchableOpacity onPress={m} activeOpacity={0.4}>
+      <View style={styles.btn}>
+        <Text style={styles.text1}>Press</Text>
+      </View>
+    </TouchableOpacity>
 
     <View>
       <Text style={styles.text2}>{getContent}</Text>
@@ -45,12 +48,19 @@ const styles = StyleSheet.create(
     },
     text1:{
       fontSize:29,
-      color:"rgb(82, 92, 232)",
+      color:"#ffffff",
     },
     text2:{
       fontSize:30,
       color:"#0000ff",
       marginTop:20,
+    },
+    btn:{
+      backgroundColor: "#000000",
+      paddingHorizontal:20,
+      paddingVertical:10,
+      borderRadius:12,
+      
     }
     
   }
