@@ -32,11 +32,11 @@ return ui;
 
 function m(){
   Alert.alert("Message","Content Changed");
-  setContent("niyamai kollo");
+  setContent("niyamai");
 }
 
-}
 
+// ai meka mehema uncolor wela tiyenne kiyala hoyanna.
 
 const styles = StyleSheet.create(
   {
