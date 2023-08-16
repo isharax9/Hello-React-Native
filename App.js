@@ -1,8 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { TouchableOpacity,TouchableHighlight } from "react-native";
+import { TouchableHighlight } from "react-native";
 import { Alert } from "react-native";
-import { Pressable } from "react-native"
 import { SafeAreaView } from "react-native";
 import { StyleSheet,Text,View } from "react-native";
 
@@ -33,7 +32,7 @@ return ui;
 
 function m(){
   Alert.alert("Message","Content Changed");
-  setContent("niyamai");
+  setContent("niyamai kollo");
 }
 
 }
