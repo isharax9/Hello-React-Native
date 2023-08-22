@@ -37,7 +37,7 @@ function m(){
 
 
 // ai meka mehema uncolor wela tiyenne kiyala hoyanna.
-//this is for commit
+
 
 const styles = StyleSheet.create(
   {
