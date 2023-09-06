@@ -23,8 +23,8 @@ function App() {
           padding: 5,
           borderColor: "#655aff",
         }}
-        value={getText}
-        onChangeText={text=>setText(text)}
+        getText
+        onChangeText={(text) => setText(text)}
       />
       <Pressable onPress={m}>
         <View style={styles.btn}>
@@ -45,7 +45,7 @@ function App() {
   );
 
   function m() {
-   setContent(getText);
+    setContent(getText);
   }
 
   return ui;
