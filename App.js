@@ -1,19 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import {
-  Alert,
-  Image,
-  TextInput,
-  TouchableHighlight,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { Alert, Image, TextInput } from "react-native";
 import { Pressable } from "react-native";
 import { SafeAreaView } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 
 function App() {
   const [getContent, setContent] = useState("Content here");
+
+  const [getText, setText] = useState("");
 
   const ui = (
     <SafeAreaView style={styles.view1}>
@@ -26,8 +21,10 @@ function App() {
           marginBottom: 20,
           borderWidth: 1,
           padding: 5,
-          borderColor: "#655aff"
+          borderColor: "#655aff",
         }}
+        value={getText}
+        onChangeText={text=>setText(text)}
       />
       <Pressable onPress={m}>
         <View style={styles.btn}>
@@ -48,8 +45,7 @@ function App() {
   );
 
   function m() {
-    Alert.alert("Message", "Content Changed");
-    setContent("නියමයි...");
+   setContent(getText);
   }
 
   return ui;
