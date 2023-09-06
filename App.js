@@ -23,7 +23,7 @@ function App() {
           padding: 5,
           borderColor: "#655aff",
         }}
-        getText
+        value={getText}
         onChangeText={(text) => setText(text)}
       />
       <Pressable onPress={m}>
