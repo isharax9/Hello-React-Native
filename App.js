@@ -37,17 +37,17 @@ const styles = StyleSheet.create(
 
 function sendRequest() {
 
-  const Request = new XMLHttpRequest();
-  Request.onreadystatechange = function(){
-    if(Request.status === 200 && Request.readyState== 4){
-      const content = Request.responseText;
-      Alert.alert("PHP Request", content);
-    }
-  } 
-  Request.open("GET","http://localhost:php_react1/test.php",true);
-  Request.send();
+  // const Request = new XMLHttpRequest();
+  // Request.onreadystatechange = function(){
+  //   if(Request.status === 200 && Request.readyState== 4){
+  //     const content = Request.responseText;
+  //     Alert.alert("PHP Request", content);
+  //   }
+  // } 
+  // Request.open("GET","http://10.0.2.2/php_react1/test.php",true);
+  // Request.send();
 
-
+ fetch("http://10.0.2.2/php_react1/test.php");
 
 
 
