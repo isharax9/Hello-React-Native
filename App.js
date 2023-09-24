@@ -47,11 +47,22 @@ function sendRequest() {
   // Request.open("GET","http://10.0.2.2/php_react1/test.php",true);
   // Request.send();
 
- fetch("http://10.0.2.2/php_react1/test.php");
+  fetch("http://10.0.2.2/php_react1/test.php")
 
+    .then(response =>{
+      return response.text();
+    })
 
+    .then(value => {
+      Alert.alert("Success", value);
+    })
 
-  Alert.alert("PHP Request","Success")
+    .catch(
+      error => {
+        Alert.alert("Error", error);
+      }
+    );
+
 }
 
 export default App;
