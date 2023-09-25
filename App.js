@@ -36,7 +36,7 @@ const styles = StyleSheet.create(
 
 
 function sendRequest() {
-
+// This is normal ajex request sending process
   // const Request = new XMLHttpRequest();
   // Request.onreadystatechange = function(){
   //   if(Request.status === 200 && Request.readyState== 4){
